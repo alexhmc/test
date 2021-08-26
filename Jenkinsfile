@@ -6,9 +6,7 @@ node {
   remote.password = 'warning93'
   remote.allowAnyHosts = true
   stage('GIT') {
-    steps {
       checkout scm
-    }
   }
   stage('Remote SSH') {
     sshCommand remote: remote, command:  "hostname"
